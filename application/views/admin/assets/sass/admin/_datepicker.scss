@@ -1,0 +1,373 @@
+/*!
+ * Datetimepicker for Bootstrap 3
+ * version : 4.17.47
+ * https://github.com/Eonasdan/bootstrap-datetimepicker/
+ */
+// .dateTimePickerInput,
+// .dateTimePickerInput:focus{
+//   width: 100%;
+//   position: absolute;
+//   top: 0;
+//   background: transparent;
+//   left: 0;
+//   height: 100%;
+//   padding: 0 0 0 52px;
+// }
+.form-group{
+  position: relative;
+}
+ .bootstrap-datetimepicker-widget {
+  list-style: none;
+  z-index: 100;
+  &.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    direction: ltr;
+    border: 0 !important;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2) !important;
+    -moz-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2) !important;
+    box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2) !important;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .list-unstyled {
+    margin: 0;
+  }
+  a[data-action] {
+    padding: 6px 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: $primary-color;
+    &:active {
+      box-shadow: none;
+      color: $primary-color;
+    }
+  }
+  .timepicker-hour, .timepicker-minute, .timepicker-second {
+    width: 54px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+  }
+  button[data-action] {
+    padding: 6px;
+  }
+  .btn {
+    &[data-action="incrementHours"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Increment Hours";
+    }
+    &[data-action="incrementMinutes"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Increment Minutes";
+    }
+    &[data-action="decrementHours"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Decrement Hours";
+    }
+    &[data-action="decrementMinutes"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Decrement Minutes";
+    }
+    &[data-action="showHours"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Show Hours";
+    }
+    &[data-action="showMinutes"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Show Minutes";
+    }
+    &[data-action="togglePeriod"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Toggle AM/PM";
+    }
+    &[data-action="clear"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Clear the picker";
+    }
+    &[data-action="today"]::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Set the date to today";
+    }
+  }
+  .picker-switch {
+    text-align: center;
+    &::after {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      content: "Toggle Date and Time Screens";
+    }
+    td {
+      padding: 0;
+      margin: 0;
+      height: auto;
+      width: auto;
+      line-height: inherit;
+      span {
+        font-size: 16px;
+        line-height: 2.5;
+        height: 2.5em;
+        width: 100%;
+        font-weight: 800;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    margin: 0;
+    td, th{
+      width: 30px;
+      height: 30px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      border: none;
+    }
+    td {
+      text-align: center;
+      border-radius: 3px;
+    }
+    th {
+      text-align: center;
+      border-radius: 2px;
+      line-height: 20px;
+      &.picker-switch {
+        width: 145px;
+      }
+      &.disabled {
+        background: none;
+        color: #777;
+        cursor: not-allowed;
+        &:hover {
+          background: none;
+          color: #777;
+          cursor: not-allowed;
+        }
+      }
+      &.prev::after {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        content: "Previous Month";
+      }
+      &.next::after {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        content: "Next Month";
+      }
+    }
+    thead tr:first-child th {
+      cursor: pointer;
+      &:hover {
+        background: #eee;
+      }
+    }
+    td {
+      height: 54px;
+      line-height: 54px;
+      width: 54px;
+      &.cw {
+        font-size: .8em;
+        height: 20px;
+        line-height: 20px;
+        color: #777;
+      }
+      &.day {
+        height: 25px;
+        line-height: 25px;
+        width: 25px;
+        &:hover {
+          background: #eee;
+          cursor: pointer;
+        }
+      }
+      &.hour:hover, &.minute:hover, &.second:hover {
+        background: #eee;
+        cursor: pointer;
+      }
+      &.old, &.new {
+        color: #777;
+      }
+      &.today {
+        position: relative;
+        &:before {
+          content: '';
+          display: inline-block;
+          border: solid transparent;
+          border-width: 0 0 7px 7px;
+          border-bottom-color: $primary-color;
+          border-top-color: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          bottom: 4px;
+          right: 4px;
+        }
+      }
+      &.active {
+        background-color: $primary-color;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        &:hover {
+          background-color: $primary-color;
+          color: #fff;
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        }
+        &.today:before {
+          border-bottom-color: #fff;
+        }
+      }
+      &.disabled {
+        background: none;
+        color: #777;
+        cursor: not-allowed;
+        &:hover {
+          background: none;
+          color: #777;
+          cursor: not-allowed;
+        }
+      }
+      span {
+        display: inline-block;
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        margin: 2px 1.5px;
+        cursor: pointer;
+        border-radius: 4px;
+        &:hover {
+          color: $primary-color;
+          background: #eee;
+        }
+        &.active {
+          background-color: $primary-color;
+          color: #fff;
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        }
+        &.old {
+          color: #777;
+        }
+        &.disabled {
+          background: none;
+          color: #777;
+          cursor: not-allowed;
+          &:hover {
+            background: none;
+            color: #777;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+  &.usetwentyfour td.hour {
+    height: 27px;
+    line-height: 27px;
+  }
+  // &.wider {
+    // width: 21em;
+  // }
+  .datepicker-decades .decade {
+    line-height: 1.8em !important;
+  }
+}
+
+
+.input-group.date .input-group-addon {
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

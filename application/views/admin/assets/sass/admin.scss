@@ -1,0 +1,115 @@
+/*!
+[Table of contents]
+
+* Background
+* Typography
+* Layouts
+   + Body & Wrapper
+   + Main Header
+   + Sidebar
+* Layouts Color
+* Components
+   + Breadcrumbs
+   + Cards
+     - Card Stats
+     - Card Task
+     - Card States
+     - Card Posts
+     - Card Pricing
+     - Card Annoucement
+     - Card Profile
+     - Accordion
+   + Inputs
+   + Tables
+   + Navbars
+   + Navsearch
+   + Badges
+   + Dropdowns
+   + Charts
+   + Alerts
+   + Buttons
+   + Navtabs
+   + Popovers
+   + Progress
+   + Paginations
+   + Sliders
+   + Modals
+   + Timeline
+   + Maps
+   + Invoice
+   + Messages
+   + Tasks
+   + Settings
+* Plugins
+   + jQueryUI
+   + jQuery Scrollbar
+   + Toggle
+   + Css Animate
+   + Full Calendar
+   + SweetAlert
+   + Datatables
+   + DateTimePicker
+   + Select2
+   + Tagsinput
+   + Dropzone
+   + Summernote
+* Responsive
+* 404
+* Login & Register
+
+# [Color codes]
+
+body-text-color: #575962
+white-color: #ffffff
+black-color: #191919
+transparent-bg : transparent
+default-color : #282a3c
+primary-color : #177dff
+secondary-color : #716aca
+info-color : #36a3f7
+success-color : #35cd3a
+warning-color : #ffa534
+danger-color : #f3545d
+
+-------------------------------------------------------------------*/
+ 
+@import "admin/variables";
+@import "admin/outlinefocus";
+@import "admin/typography";
+@import "admin/opacity";
+
+//layouts
+@import "admin/layouts";
+@import "admin/layouts-colors";
+
+//components
+@import "admin/components";
+
+//plugins
+@import "admin/plugins";
+
+//responsive
+@import "admin/responsive";
+
+//Login
+@import "admin/login";
+
+//404
+@import "admin/pagenotfound";
+
+//Background
+@import "admin/background";
+@import "admin/datepicker";
+
+.tooltip.bs-tooltip-top {
+   margin-left: 25px !important;
+}
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+   margin-left: 11px !important;
+}
+.agentDetails{
+   max-width: 300px;
+   overflow: hidden;
+   max-height: 40px;
+}

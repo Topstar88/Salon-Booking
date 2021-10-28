@@ -1,0 +1,175 @@
+@mixin borderRadius($radius){
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//@include borderRadius (100px);
+
+@mixin inputPlaceholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+  }
+  //.checkoutInput{
+  //   @include inputPlaceholder{
+  //     color: $colorPlaceholder;
+  //     opacity: 1;
+  //   }
+  // }
+  
+  @mixin flexCenter($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  //@include flexCenter('');
+  
+  @mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+  }
+  
+  @mixin cssTriangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+    @include pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+  }
+  
+  @mixin responsiveRatio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+  }
+  
+  @mixin imageResponsive() {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  //@include truncate(max-width);
+  
+  @mixin clearfix {
+      &::after {
+          content: '';
+          display: table;
+          clear: both;
+      }
+  }
+  //@include clearfix
+  
+  @mixin hidden {
+      display: none;
+      visibility: hidden;
+  }
+  
+  @mixin visible($state: 'block') {
+      display: unquote($state);
+      visibility: visible;
+  }
+  
+  @mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+  }
+  
+  @mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+  }
+  
+  $z-indexes: (
+    "chatSection",//2
+    "header-bottom"//1
+  );
+  //z-index: z("chatSection");
+  @function z($name) {
+    @if index($z-indexes, $name) {
+        @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+    } @else {
+        @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+        @return null;
+    }
+  }
+  
+  @mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+  }
+  //@include transition();
+  
+  $breakpoints: (
+      "phone":        401px,
+      "phoneWide":    481px,
+      "miniTablet":   561px,
+      "tabletSmall":  640px,
+      "tablet":       769px,
+      "tabletWide":   993px,
+      "desktop":      1025px,
+      "desktopWide":  1201px,
+      "laptop":       1367px,
+      "lcd":          1441px,
+      "lcdWide":      1601px
+  );
+  @mixin mediaQuery($width, $type: min) {
+      @if map_has_key($breakpoints, $width) {
+          $width: map_get($breakpoints, $width);
+          @if $type == max {
+              $width: $width - 1px;
+          }
+          @media only screen and (#{$type}-width: $width) {
+              @content;
+          }
+      }
+  }
+// @include mediaQuery("tabletWide", max) {
+//   font-size: 2rem;
+// }
