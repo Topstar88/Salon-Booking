@@ -65,10 +65,10 @@ class Account extends CI_Controller {
             if($email != $data['user']['email']) {
                 array_push($rules, array(
                     'field' => 'admin-email',
-                    'label' => 'E-Mail',
+                    'label' => 'email',
                     'rules' => 'required|valid_email|is_unique[logintbl.email]',
                     'errors' => array(
-                        'is_unique' => 'That E-Mail is already in use by another Administrator account.'
+                        'is_unique' => 'That email is already in use by another Administrator account.'
                     )
                 ));
                 $to_update['email'] = strtolower($email);
