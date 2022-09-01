@@ -37,8 +37,8 @@
     <ul>
         <li>Agent Selection with Booking</li>
         <li>Pay with Stripe/Credit Card</li>
-        <li>Clients Accounts</li>
-        <li>Social Login Google & Facebook</li>
+        <li>Client Accounts</li>
+        <li>Social Login(Google & Facebook)</li>
         <li>Manage Bookings</li>
         <li>Gallery Images</li>
         <li>Top, Bottom Ads Support</li>
@@ -48,7 +48,7 @@
         <li>Built-in Contact Form</li>
         <li>Powerful Admin Panel</li>
         <li>100% Responsive Design</li>
-        <li>AJAX Based</li>
+        <li>AJAX</li>
         <li>SEO Ready</li>
         <li>100% Pent-ested Security</li>
         <li>Quick and Easy Installation</li>
