@@ -13,6 +13,10 @@
                      Contact Me: <a href="mailto:topstar88@outlook.com" target="_blank">topstar88@outlook.com</a>
                  </strong>
              </p>
+             <p class="prepend-top">
+                <a href="https://salon.hnaxes.com" target="_blank">Frontend Demo</a><br>
+                <a href="https://salon.hnaxes.com/admin" target="_blank">Admin Panel Demo</a>
+             </p>
              <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img1.png" height="280" width="600" >
              <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img2.png" height="280" width="600" >
              <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img3.png" height="280" width="600" >
