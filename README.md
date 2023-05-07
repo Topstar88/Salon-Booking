@@ -8,11 +8,6 @@
         <h1 class="center">Salon Booking System by Tony Li</h1>
         <div class="borderTop">
             <div class="span-6 colborder info prepend-1">
-                <p class="prepend-top">
-                    <strong>
-                     Contact Me: <a href="mailto:topstar88@outlook.com" target="_blank">topstar88@outlook.com</a>
-                 </strong>
-             </p>
              <p class="prepend-top">
                 <a href="https://salon.hnaxes.com" target="_blank">Frontend Demo</a><br>
                 <a href="https://salon.hnaxes.com/admin" target="_blank">Admin Panel Demo</a><br>
@@ -84,7 +79,6 @@
         <li>Navigate to <strong>yoursite.com/install</strong> and complete installation steps</li>
         <li>You can access admin area on: yoursite.com/admin</li>
     </ul>
-    <p>If you have any query or want any customization feel to free to contact <a href="mailto:topstar88@outlook.com" target="_blank">topstar88@outlook.com</a>.</p>
     <p><a href="#toc">Go To Table of Contents</a></p>
     <hr class="space">
 </div>
