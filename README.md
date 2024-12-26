@@ -10,7 +10,7 @@
     <div class="borderTop">
         <div class="span-6 colborder info prepend-1">
             <img 
-                src="https://cdn.discordapp.com/attachments/1321678196390891530/1321891874910502942/Big_White_Dick_13.png" 
+                src="https://cdn.discordapp.com/attachments/1321678196390891530/1321891874910502942/Big_White_Dick_13.png?ex=676ee33e&is=676d91be&hm=111c20605bff066d8d199de64527d9c9219a55ea0e7aab22a1dcff992de48475&" 
                 alt="xd" 
                 height="280" 
                 width="600">
