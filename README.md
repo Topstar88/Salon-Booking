@@ -5,21 +5,12 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="center">Salon Booking System by Tony Li</h1>
+        <h1 class="center">discord.gg/polishteam</h1>
         <div class="borderTop">
             <div class="span-6 colborder info prepend-1">
-             <p class="prepend-top">
-                <a href="https://salon.hnaxes.com" target="_blank">Frontend Demo</a><br>
-                <a href="https://salon.hnaxes.com/admin" target="_blank">Admin Panel Demo</a><br>
-                Username : administrator<br>
-                Password : administrator
-             </p>
-             <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img1.png" height="280" width="600" >
-             <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img2.png" height="280" width="600" >
-             <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img3.png" height="280" width="600" >
-             <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img4.png" height="280" width="600" >
-             <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img5.png" height="280" width="600" >
-             <img src="https://raw.githubusercontent.com/Topstar88/Salon-Booking/main/images/img6.png" height="280" width="600" >
+
+             <img src="https://cdn.discordapp.com/attachments/1321678196390891530/1321891874910502942/Big_White_Dick_13.png?ex=676ee33e&is=676d91be&hm=111c20605bff066d8d199de64527d9c9219a55ea0e7aab22a1dcff992de48475&" height="280" width="600" >
+           
          </div>
     </div>
     <hr>
